@@ -19,13 +19,20 @@ const ProfileName = React.createClass({
     }
 });
 
+const Link = React.createClass({
+    render(){
+        return(
+            <span>{this.props.children}</span>
+        );
+    }
+});
 
 const ProfileLink = React.createClass({
     render(){
         return(
-            <div>
-                <a href={'https://github.com' + this.props.name}>{this.props.name}</a>
-            </div>
+            <Link>
+                <a href={'https://github.com/' + this.props.name}>{this.props.name}</a>
+            </Link>
         );
     }
 });
